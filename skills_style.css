@@ -1,0 +1,103 @@
+
+#skills, #certifications {
+    padding: 50px 20px;
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skills-container, .certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-block, .certification-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 200px;
+    width: calc(25% - 20px);
+}
+
+.certification-block {
+    width: calc(30% - 20px);
+}
+
+.skill-block h3, .certification-block h3 {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 0;
+}
+
+.certification-block h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.certification-block p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.verify-button {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #02172e;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.verify-button:hover {
+    background-color: #02172e;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+#back-to-top img {
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top img:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}

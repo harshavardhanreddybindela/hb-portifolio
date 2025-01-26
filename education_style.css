@@ -1,0 +1,119 @@
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Increased gap between experience blocks */
+    padding: 20px;
+}
+
+.experience-block {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    margin-bottom: 10px;
+    /* Adds extra space below each block */
+}
+
+.experience-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.company {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.role-summary {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.responsibilities {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* .experience-details {
+    margin-top: 10px;
+} */
+
+.see-more-btn:hover {
+    background-color: #02172e;
+}
+
+/* General Styles for Experience Section */
+.experience-block {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Role Summary Text */
+  .role-summary {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  /* See More Button */
+  .see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #02172e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Icon Styles */
+  .icon-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotate Icon when Expanded */
+  .experience-details:not(.hidden) + .icon-arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* Hidden Details */
+  .hidden {
+    display: none;
+  }
+  
+  .experience-details {
+    margin-top: 15px;
+    text-align: left;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+  }
+  

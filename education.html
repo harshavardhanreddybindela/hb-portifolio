@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harsha Vardhan Reddy Bindela Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+          <a href="index.html">Harsha Vardhan Reddy Bindela</a>
+        </div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills | Certification</a></li>
+            <li><a href="publications_consideration.html">Publications | Consideration</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Harsha Vardhan Reddy Bindela</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+            <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="skills.html" onclick="toggleMenu()">Skills | Certification</a></li>
+            <li><a href="publications_consideration.html" onclick="toggleMenu()">Publications | Consideration</a></li>
+            <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+    <section id="profile">
+        <div class="education-container">
+            <!-- First Education Block -->
+            <div class="education-block">
+                <div class="section__school_pic-container">
+                    <img src="./assets/masters_logo.jpg" alt="Harsha Vardhan Reddy Bindela profile picture"
+                        class="school-icon" />
+                </div>
+                <div class="section__text">
+                    <p class="section__text__p1">Masters in Computer Science</p>
+                    <h1 class="title">Saint Louis University</h1>
+                    <p class="section__text__p2">Graduation Year: 2024</p>
+                </div>
+            </div>
+
+            <!-- Second Education Block -->
+            <div class="education-block">
+                <div class="section__pic-container">
+                    <img src="./assets/bachelor_logo.png" alt="Harsha Vardhan Reddy Bindela profile picture"
+                        class="school-icon" />
+                </div>
+                <div class="section__text">
+                    <p class="section__text__p1">Bachelor's of Technology</p>
+                    <h1 class="title">Bharath University</h1>
+                    <p class="section__text__p2">Graduation Year: 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </nav>
+    <div id="back-to-top">
+        <a href="#desktop-nav" class="back-to-top-icon">
+            <img src="./assets/double-arrow-top-icon.png" alt="Back to Top" />
+        </a>
+    </div>
+    
+    <footer>
+        <p class="footer">
+            Copyright &#169; 2025 Harsha Vardhan Reddy Bindela. All Rights Reserved.
+        </p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
