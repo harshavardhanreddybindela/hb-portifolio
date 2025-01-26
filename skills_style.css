@@ -1,103 +1,112 @@
-
-#skills, #certifications {
-    padding: 50px 20px;
-    margin-bottom: 40px;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
+/* Skills and Certifications Section Container */
 .skills-container, .certifications-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr)); /* Flexible grid layout */
+    gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
-.skill-block, .certification-block {
+/* Individual Block Styling */
+.details-container {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    min-width: 200px;
-    width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .certification-block {
-    width: calc(30% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-.skill-block h3, .certification-block h3 {
-    font-size: 1.2rem;
-    color: #444;
-    margin: 0;
-}
-
-.certification-block h3 {
+/* Block Title Styling */
+.details-container h2, .certifications-container h2 {
+    font-size: 1.5rem;
     color: #333;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+}
+
+/* Certification Item Styling */
+.certification-block h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
 }
 
 .certification-block p {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 15px;
+    margin: 5px 0;
 }
 
-.verify-button {
+.certification-block a {
     display: inline-block;
-    padding: 8px 15px;
+    padding: 10px 15px;
     font-size: 1rem;
     color: #fff;
     background-color: #02172e;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.verify-button:hover {
-    background-color: #02172e;
-}
-
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    z-index: 1000;
-}
-
-#back-to-top img {
-    width: 50px;
-    height: 50px;
-    color: white;
-    border-radius: 50%;
+.certification-block a:hover {
     background-color: #333;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#back-to-top img:hover {
-    background-color: #333;
-    transform: scale(1.1);
-}
-
-footer {
-    position: relative;
+/* Article Grid Inside Block */
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns per block */
+    gap: 10px;
     width: 100%;
-    bottom: 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill Items */
+.article-container article {
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Center vertically */
+    gap: 8px; /* Space between icon and text */
+}
+
+.article-container img {
+    width: 20px; /* Icon size */
+    height: 20px; /* Icon size */
+}
+
+.article-container h4 {
+    font-size: 1rem; /* Font size for skills */
+    color: #333; /* Text color */
+    margin: 0; /* Remove margin */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skills-container, .certifications-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+    .article-container {
+        grid-template-columns: 1fr; /* Single column layout for skills inside blocks */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills-container, .certifications-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
 }
