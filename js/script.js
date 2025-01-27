@@ -35,3 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const menuLinks = document.querySelector(".menu-links");
+
+  hamburgerMenu.addEventListener("click", () => {
+    hamburgerMenu.classList.toggle("open");
+    menuLinks.classList.toggle("open");
+  });
+});
