@@ -392,12 +392,12 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
+/* .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
   margin: auto 0;
-}
+} */
 
 .section__text {
   align-self: center;
@@ -535,12 +535,12 @@ section {
   gap: 4rem;
   height: 80%;
 }
-
+/* 
 .section__pic-container {
   height: 400px;
   width: 400px;
   margin: auto 0;
-}
+} */
 
 /* EXPERIENCE SECTION */
 
@@ -667,24 +667,20 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
 }
-
 .education-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 0px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  width: 300px;
-  height: 300px;
   text-align: center;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
 }
 
 .education-block:hover {
@@ -693,37 +689,36 @@ footer p {
 }
 
 .school-icon {
-  width: 80px;
-  height: 80px;
+  width: 120px; /* Adjust width as needed */
+  height: 120px;
   object-fit: contain;
-  background-color: #f5f5f5;
+  background-color: #ffffff; /* Optional: Add background for logos */
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 50%; /* Makes it circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
+  display: flex;
 }
 
 .section__text {
-  text-align: center;
   margin-top: 10px;
-}
-
-.title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  margin: 10px 0 5px;
 }
 
 .section__text__p1 {
   font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.title {
+  font-size: 1.2rem;
   color: #555;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .section__text__p2 {
   font-size: 0.9rem;
   color: #777;
-  margin: 5px 0;
 }
 
 #back-to-top img {
