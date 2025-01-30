@@ -1,5 +1,5 @@
 .experience-container {
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 30px;
     /* Increased gap between experience blocks */

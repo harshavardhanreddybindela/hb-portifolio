@@ -1,59 +1,53 @@
+// Hamburger Menu Toggle
 function toggleMenu() {
   const hamburgerIcon = document.querySelector('.hamburger-icon');
   const menuLinks = document.querySelector('.menu-links');
-  
-  hamburgerIcon.classList.toggle('open');
-  menuLinks.classList.toggle('open');
-}
 
-
-function toggleDetails(button) {
-  // Find the details section within the same container
-  const details = button.closest('.details-container').querySelector('.project-details');
-
-  if (!details) {
-    console.error('Details section not found for this button.');
+  if (!hamburgerIcon || !menuLinks) {
+    console.error('Hamburger menu or links not found.');
     return;
   }
 
-  const isHidden = details.classList.contains('hidden');
+  menuLinks.classList.toggle('open');
+}
 
-  // Toggle visibility
+// Toggle Details for Both Experience and Projects
+function toggleDetails(button) {
+  // Find the closest container that holds the details
+  const container = button.closest('.details-container') || button.closest('.experience-block');
+
+  if (!container) {
+    console.error('Parent container not found.');
+    return;
+  }
+
+  // Look for the details section within the container
+  const details = container.querySelector('.project-details') || container.querySelector('.experience-details');
+
+  if (!details) {
+    console.error('Details section not found.');
+    return;
+  }
+
+  // Toggle visibility of the details section
   details.classList.toggle('hidden');
-  details.classList.toggle('visible');
 
   // Update button text and arrow direction
   const icon = button.querySelector('.icon-arrow');
   const text = button.querySelector('span');
 
-  if (isHidden) {
-    text.textContent = 'See Less';
-    icon.innerHTML = '&#x25B2;'; // Up arrow
-  } else {
+  if (details.classList.contains('hidden')) {
     text.textContent = 'See More';
-    icon.innerHTML = '&#x25BC;'; // Down arrow
+    if (icon) icon.innerHTML = '&#x25BC;'; // Down arrow
+  } else {
+    text.textContent = 'See Less';
+    if (icon) icon.innerHTML = '&#x25B2;'; // Up arrow
+  }
+
+  // Ensure features are shown or hidden based on the toggle state
+  if (!details.classList.contains('hidden')) {
+    details.style.display = 'block'; // Show the details
+  } else {
+    details.style.display = 'none'; // Hide the details
   }
 }
-
-// JavaScript to Show/Hide Back to Top Button on Scroll
-document.addEventListener("DOMContentLoaded", function () {
-  const backToTopButton = document.getElementById("back-to-top");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopButton.style.display = "block"; // Show button when scrolled down
-    } else {
-      backToTopButton.style.display = "none"; // Hide button when at the top
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
-  const menuLinks = document.querySelector(".menu-links");
-
-  hamburgerMenu.addEventListener("click", () => {
-    hamburgerMenu.classList.toggle("open");
-    menuLinks.classList.toggle("open");
-  });
-});
