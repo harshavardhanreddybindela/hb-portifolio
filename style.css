@@ -536,11 +536,16 @@ section {
 
 .details-container {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 10px; /* Rounded corners */
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent inner content overflow */
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  justify-content: space-between; /* Distribute space evenly */
+  height: auto; /* Allow height to adjust dynamically */
+  width: 100%; /* Ensure blocks fit within their grid area */
 }
 
 .details-container:hover {
@@ -585,12 +590,13 @@ section {
   flex-direction: column;
 }
 
+
 #projects.experience-details-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures responsive grid */
+  gap: 20px; /* Space between grid items */
+  margin: 20px auto; /* Center grid with some margin */
 }
-
 .article-container {
   display: flex;
   text-align: initial;
@@ -614,9 +620,9 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
-  position: relative;
+  position:inherit;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
 }
 
 .footer {
@@ -707,7 +713,7 @@ footer p {
 .education-block {
   flex: 1;
   min-width: 350px;
-  max-width: 400px;
+  max-width: 450px;
   height: 400px; 
   background: #fff;
   border-radius: 10px;

@@ -11,6 +11,7 @@
 
 /* Individual Block Styling */
 .details-container {
+    overflow: hidden;
     background-color: #fff;
     border-radius: 10px;
     padding: 10px;
