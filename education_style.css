@@ -1,20 +1,20 @@
 .experience-container {
-    display: grid;
-    flex-direction: column;
-    gap: 30px;
-    /* Increased gap between experience blocks */
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic column layout */
+  gap: 30px; /* Space between experience blocks */
+  padding: 20px;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .experience-block {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    margin-bottom: 10px;
-    /* Adds extra space below each block */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-align: center;
 }
 
 .experience-block:hover {

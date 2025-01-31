@@ -7,11 +7,9 @@
   padding: 0;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
 
 html {
+  font-size: 14px;
   scroll-behavior: smooth;
 }
 
@@ -19,20 +17,52 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  /* Prevent horizontal scroll */
+  overflow-x: hidden; /* Prevent horizontal scroll */
   font-family: "Poppins", sans-serif;
+}
+
+/* Reduce specific font sizes for various elements */
+body {
+  font-size: 0.9rem; /* Slightly smaller body text */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 0.9em; /* Scale down all headings slightly */
+}
+
+p {
+  font-size: 0.85rem; /* Smaller paragraph text */
+}
+
+.nav-links a {
+  font-size: 0.9rem; /* Reduce navigation link size */
+}
+
+.project-title {
+  font-size: 1.4rem; /* Slightly smaller project title */
+}
+
+.brief-description {
+  font-size: 0.95rem; /* Smaller description text */
+}
+
+.btn-container .project-btn,
+.see-more-btn {
+  font-size: 0.85rem; /* Smaller button text */
 }
 
 /* Responsive Wrapper */
 .container {
-  max-width: 1200px;
-  /* Limits the width for large screens */
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
-  /* Adds padding for smaller screens */
+  padding: 0 10px; /* Reduced padding to avoid extra spacing */
 }
-
 /* TRANSITION */
 
 a,
@@ -48,11 +78,10 @@ nav,
 }
 
 nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
+  width: 99%;
+  max-width: 100%;
+  padding: 0 5vw;
 }
-
 .nav-links {
   gap: 2rem;
   list-style: none;
@@ -165,11 +194,13 @@ a:hover {
 }
 
 #about {
-  padding: 60px 20px;
-  /* Increased padding for better spacing */
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 5vw;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .title {
@@ -181,15 +212,6 @@ a:hover {
   color: #333;
 }
 
-.about-container {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  /* Wrap content for smaller screens */
-  align-items: center;
-  justify-content: center;
-  /* Center-align the content */
-}
 
 .profile-container {
   flex: 1;
@@ -199,21 +221,23 @@ a:hover {
 }
 
 .about-pic {
-  width: 300px;
-  /* Adjusted size for larger display */
-  height: 400px;
+  width: 250px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%;
   border: 4px solid #e0e0e0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-.info-container {
-  flex: 2;
+.about-container {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* .details-container {
@@ -226,11 +250,11 @@ a:hover {
 
 .info-box {
   flex: 1;
-  text-align: center;
+  min-width: 250px; /* Prevents shrinking */
   background-color: #fff;
   padding: 15px;
-  /* Adjusted padding for compact layout */
   border-radius: 10px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -246,15 +270,14 @@ a:hover {
 }
 
 .text-container {
-  margin-top: 20px;
   text-align: justify;
   /* Justify text for readability */
 }
 
 .text-container p {
-  line-height: 1.6;
   font-size: 1rem;
   color: #333;
+  line-height: 1.6;
 }
 
 .highlight {
@@ -262,33 +285,8 @@ a:hover {
   color: #333;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 1rem;
-    /* Reduce gap for smaller screens */
-  }
-
-  .about-pic {
-    width: 200px;
-    /* Adjust size for medium screens */
-    height: 200px;
-  }
-
-
-  .info-box {
-    margin-bottom: 20px;
-    /* Add spacing between stacked boxes */
-  }
-}
 
 @media (max-width: 480px) {
-  .about-pic {
-    width: 180px;
-    /* Smaller size for mobile */
-    height: 180px;
-  }
-
   .title {
     font-size: 2rem;
     /* Adjust title size for mobile */
@@ -328,21 +326,11 @@ a:hover {
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
-    gap: 20px;
   }
-/* 
+
   .details-container {
     flex-direction: column;
-    gap: 15px;
-  } */
-
-  .info-box {
-    width: 100%;
-  }
-
-  .about-pic {
-    width: 150px;
-    height: 150px;
+    gap: 10px;
   }
 
   .text-container p {
@@ -359,10 +347,10 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  .about-pic {
+  /* .about-pic {
     width: 130px;
     height: 130px;
-  }
+  } */
 
   .text-container p {
     font-size: 0.8rem;
@@ -389,9 +377,9 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 4vh 5vw;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -504,9 +492,9 @@ section {
 
 /* ABOUT SECTION */
 
-#about {
+/* #about {
   position: relative;
-}
+} */
 
 .about-containers {
   gap: 2rem;
@@ -524,29 +512,20 @@ section {
   display: flex;
 }
 
-.about-pic {
-  border-radius: 2rem;
-}
-
 .arrow {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
 }
 
-.details-container {
-  background: #fff;
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Prevent inner content overflow */
+.details-container-about {
   display: flex;
-  flex-direction: column; /* Arrange content vertically */
-  justify-content: space-between; /* Distribute space evenly */
-  height: auto; /* Allow height to adjust dynamically */
-  width: 100%; /* Ensure blocks fit within their grid area */
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Responsive */
 }
+
+
 
 .details-container:hover {
   transform: translateY(-5px);
@@ -585,17 +564,21 @@ section {
 }
 
 .experience-details-container {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
 }
 
 
-#projects.experience-details-container {
+#projects .experience-details-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ensures responsive grid */
-  gap: 20px; /* Space between grid items */
-  margin: 20px auto; /* Center grid with some margin */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted grid */
+  gap: 20px; /* Reduced space between projects */
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  justify-content: center;
 }
 .article-container {
   display: flex;
@@ -636,7 +619,7 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
+  width: 50%;
   height: 90%;
 }
 
@@ -669,6 +652,15 @@ article .icon {
   margin: 2rem auto;
   padding: 0.5rem;
 }
+
+.info-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
 
 .contact-info-container {
   display: flex;
@@ -787,14 +779,9 @@ footer p {
 /* Prevent Overlapping Footer */
 footer {
   position: relative;
-  /* Set relative to avoid overlap */
   width: 100%;
-  background-color: #333;
-  color: #fff;
+  padding: 10px 5vw;
   text-align: center;
-  padding: 10px 0;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: auto;
 }
 
 body {
@@ -817,22 +804,21 @@ footer {
 
 /* Publications & Recommendations Styling */
 
-#publications {
+/* #publications {
   padding: 0px 20px;
   margin-bottom: 20px;
-  /* Reduced gap */
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .experience-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic column layout */
+  gap: 30px; /* Space between experience blocks */
+  padding: 20px;
   justify-content: center;
   align-items: stretch;
-  margin-top: 20px;
 }
 
 .experience-block {
@@ -1082,6 +1068,7 @@ nav .logo:hover {
   display: none;
 }
 
+
 /* Mobile styles */
 @media (max-width: 768px) {
   #desktop-nav {
@@ -1128,7 +1115,8 @@ nav .logo:hover {
 
 .project-img {
   width: 100%;
-  height: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: cover; /* Ensures the image scales proportionally */
   transition: transform 0.3s ease; /* Add a zoom effect on hover */
 }

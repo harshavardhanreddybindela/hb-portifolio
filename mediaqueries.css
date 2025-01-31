@@ -27,3 +27,50 @@ h1.title {
     font-size: 1.5rem; /* Further adjust size for smaller screens */
   }
 }
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem; /* Adjust title size for medium screens */
+  }
+
+  .section__text__p1,
+  .section__text__p2 {
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  .btn-container {
+    flex-direction: column; /* Stack buttons on medium screens */
+  }
+
+  .btn {
+    width: 90%; /* Ensure full-width buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  #profile {
+    gap: 15px; /* Reduce spacing for small screens */
+  }
+
+  .section__text {
+    padding: 0 10px; /* Add padding for small devices */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Smaller title size for mobile */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Reduce button font size */
+  }
+
+  .section__text__p1,
+  .section__text__p2 {
+    font-size: 0.9rem; /* Smaller text for readability */
+  }
+
+  #socials-container .icon {
+    width: 30px; /* Smaller icon size for mobile */
+  }
+}

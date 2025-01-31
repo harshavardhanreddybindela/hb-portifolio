@@ -10,7 +10,7 @@
 }
 
 /* Individual Block Styling */
-.details-container {
+/* .details-container {
     overflow: hidden;
     background-color: #fff;
     border-radius: 10px;
@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
-}
+} */
 
 .certification-block {
     background-color: #fff;
@@ -75,7 +75,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns per block */
     gap: 10px;
-    width: 100%;
+    width: 90%;
 }
 
 /* Skill Items */
