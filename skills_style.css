@@ -96,6 +96,10 @@
     margin: 0; /* Remove margin */
 }
 
+.article-container-title{
+    font-size: 1rem; 
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .skills-container, .certifications-container {
