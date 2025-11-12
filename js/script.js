@@ -1,13 +1,17 @@
 // Hamburger Menu Toggle
 function toggleMenu() {
   const hamburgerIcon = document.querySelector('.hamburger-icon');
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
   const menuLinks = document.querySelector('.menu-links');
 
-  if (!hamburgerIcon || !menuLinks) {
-    console.error('Hamburger menu or links not found.');
+  if (!hamburgerIcon || !menuLinks || !hamburgerMenu) {
+    console.error('Hamburger menu elements not found.');
     return;
   }
 
+  // Toggle the open class on both the icon and menu
+  hamburgerIcon.classList.toggle('open');
+  hamburgerMenu.classList.toggle('open');
   menuLinks.classList.toggle('open');
 }
 
